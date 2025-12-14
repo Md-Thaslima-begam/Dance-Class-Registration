@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Join Dance Class</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: whitesmoke;
+      color: black;
+    }
+
+    header {
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h2 {
+      font-size: 22px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: red;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px gray;
+    }
+
+    .container img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .form-box {
+      padding: 20px;
+      text-align: center;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-size: 22px;
+      color: black;
+    }
+
+    p {
+      font-size: 14px;
+      color: gray;
+      margin-bottom: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 40%;
+      border: 2px solid red;
+      border-radius: 6px;
+      margin: 10px;
+      outline: none;
+      color: red;
+      transition: 0.3s;
+    }
+
+    input.valid {
+      border-color: green;
+      color: green;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: black;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: dimgray;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      background: ghostwhite;
+      border-radius: 8px;
+      text-align: left;
+    }
+
+    .output div {
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        background: black;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 180px;
+        padding: 15px;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      input {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Dance Studio</h2>
+    <i class="fas fa-bars hamburger"></i>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <img src="Assects/—Pngtree—beautiful starry sky ballet dance_1144450.jpg" alt="Dance Class">
+    <div class="form-box">
+      <h3>Join Dance Class</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <input type="text" id="name" placeholder="Enter your Name">
+      <input type="email" id="email" placeholder="Enter your Email">
+      <br>
+      <button id="registerBtn">Register Now</button>
+      <div class="message" id="message"></div>
+      <div class="output" id="output"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
